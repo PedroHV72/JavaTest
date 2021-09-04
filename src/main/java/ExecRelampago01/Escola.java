@@ -1,16 +1,9 @@
 package ExecRelampago01;
 
 public class Escola {
-    private String nome;
+
     private Professor diretor;
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    private Cidade cidade;
 
     public Professor getDiretor() {
         return diretor;
@@ -20,12 +13,38 @@ public class Escola {
         this.diretor = diretor;
     }
 
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
+
     public String getDescricaoEscolaridadeDiretor() {
         if (this.diretor == null) {
             return "Escola sem diretor";
         }
         else {
             return this.diretor.getDescricaoEscolaridade();
+        }
+    }
+
+    public String getNomeEstado() {
+        if (this.cidade == null) {
+            return "Escola sem cidade";
+        }
+        else {
+            return this.cidade.getNomeEstado();
+        }
+    }
+
+    public String getNomeDiretor() {
+        if (this.diretor == null) {
+            return "Escola sem diretor";
+        }
+        else {
+            return this.diretor.getNome();
         }
     }
 }
