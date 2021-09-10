@@ -1,10 +1,10 @@
 package ExecRelampago02;
 
-public class Aluno {
+public class Pessoa {
 
-    private String nome;
+    protected String nome;
 
-    public Aluno(String nome) {
+    public Pessoa(String nome) {
         this.nome = nome;
     }
 
