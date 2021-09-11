@@ -72,4 +72,8 @@ public class Curso {
         return this.turmas.contains(turma);
     }
 
+    public int getQuantidadeTurmas() {
+        return this.turmas.size();
+    }
+
 }

@@ -3,6 +3,7 @@ package ExecRelampago02;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CursoTest {
@@ -47,7 +48,10 @@ class CursoTest {
         Turma turma = new Turma(new Disciplina("Laboratório de Empreendedorismo"));
         curso.adicionarTurma(turma);
 
+        assertTrue(curso.verificarTurmaCurso(turma));
         assertTrue(curso.excluirTurma(turma));
+        assertFalse(curso.verificarTurmaCurso(turma));
+        assertEquals(0, curso.getQuantidadeTurmas());
     }
 
     @Test
